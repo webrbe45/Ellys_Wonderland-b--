@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.01
-  jumpPower: 10
+  jumpPower: 9
   lowJumpMultiplier: 2
   fallMultiplier: 2.5
   whatIsGround:
