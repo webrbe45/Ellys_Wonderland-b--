@@ -4,50 +4,78 @@ public class EnemyAI : MonoBehaviour
 {
     public float patrolSpeed = 2f; //기본 이동속도
     public float chaseSpeed = 5f; //돌진 속도
-    public float patrolDistance = 3f; //좌우 이동거리
-    public float detectionRange = 5f; //플레이어 감지 범위
+    public float patrolDistance = 3f; //좌우 이동 거리
+    public float detectionRange = 5f; //플레이어 인식 범위
+    public float stopDuration = 1f; // 플레이어와 충돌 시 멈추는 시간
 
-    private Vector3 startPos;
-    private bool movingRight = true;
     private Transform player;
-    private Rigidbody2D rb;
+    private Vector2 startPos;
+    private bool movingRight = true;
+    private bool isChasing = false;
+    private bool isStopped = false;
+    private float stopTimer = 0f;
 
     void Start()
     {
-        startPos = transform.position;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        rb = GetComponent<Rigidbody2D>();
+        startPos = transform.position;
     }
 
     void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-
-        if (distanceToPlayer <= detectionRange)
+        if (isStopped)
         {
-            
-            Vector2 direction = (player.position - transform.position).normalized;
-            rb.velocity = new Vector2(direction.x * chaseSpeed, rb.velocity.y);
+            stopTimer -= Time.deltaTime;
+            if (stopTimer <= 0f)
+            {
+                isStopped = false;
+            }
+            return;
+        }
+
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (distanceToPlayer < detectionRange)
+        {
+            isChasing = true;
         }
         else
         {
-            Patrol();            
+            isChasing = false;
+        }
+
+        if (isChasing)
+        {
+            Vector2 direction = (player.position - transform.position).normalized;
+            transform.Translate(direction * chaseSpeed * Time.deltaTime);
+        }
+        else
+        {
+            Patrol();
         }
     }
 
     void Patrol()
     {
-        if (movingRight)
+        float move = (movingRight ? 1 : -1) * patrolSpeed * Time.deltaTime;
+        transform.Translate(move, 0, 0);
+
+        if (Vector2.Distance(transform.position, startPos) > patrolDistance)
         {
-            rb.velocity = new Vector2(patrolSpeed, rb.velocity.y);
-            if (transform.position.x >= startPos.x + patrolDistance)
-                movingRight = false;
+            movingRight = !movingRight;
+
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * (movingRight ? 1 : -1);
+            transform.localScale = scale;
         }
-        else
+    }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            rb.velocity = new Vector2(-patrolSpeed, rb.velocity.y);
-            if (transform.position.x <= startPos.x - patrolDistance)
-                movingRight = true;
+            isStopped = true;
+            stopTimer = stopDuration;
         }
     }
 }
