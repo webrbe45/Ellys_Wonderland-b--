@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - NextStage
   - Trap
+  - JumpPad
   layers:
   - Default
   - TransparentFX
