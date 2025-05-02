@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - NextStage
   - Trap
+  - BigMushroom
+  - SmallMushroom
   layers:
   - Default
   - TransparentFX
