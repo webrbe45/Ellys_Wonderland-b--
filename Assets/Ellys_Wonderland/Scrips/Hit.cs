@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerBlink : MonoBehaviour
 {
@@ -8,26 +9,26 @@ public class PlayerBlink : MonoBehaviour
     public float blinkInterval = 0.1f;
     public float knockbackForce = 5f;
     public float damageCooldown = 2f;
+    public int maxHP = 3;
 
     private float damageTimer = 0f;
     private bool isBlinking = false;
     private bool isTouchingTrap = false;
     private GameObject currentTrap;
+    private int currentHP;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        currentHP = maxHP;
     }
 
     void Update()
     {
         if (isTouchingTrap && damageTimer <= 0 && !isBlinking)
         {
-            Vector2 direction = (transform.position - currentTrap.transform.position).normalized;
-            rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
-            StartCoroutine(BlinkEffect());
-            damageTimer = damageCooldown;
+            TakeDamage(1, currentTrap.transform.position);
         }
 
         if (damageTimer > 0)
@@ -54,7 +55,22 @@ public class PlayerBlink : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator BlinkEffect()
+    void TakeDamage(int amount, Vector3 damageSourcePosition)
+    {
+        currentHP -= amount;
+        if (currentHP <= 0)
+        {
+            Die();
+            return;
+        }
+
+        Vector2 direction = (transform.position - damageSourcePosition).normalized;
+        rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+        StartCoroutine(BlinkEffect());
+        damageTimer = damageCooldown;
+    }
+
+    private IEnumerator BlinkEffect()
     {
         isBlinking = true;
         float timer = 0f;
@@ -66,5 +82,10 @@ public class PlayerBlink : MonoBehaviour
         }
         sr.enabled = true;
         isBlinking = false;
+    }
+
+    void Die()
+    {
+        Destroy(gameObject); 
     }
 }
