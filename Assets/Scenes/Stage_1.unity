@@ -399,6 +399,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  bouncepower: 15
 --- !u!50 &665160031
 Rigidbody2D:
   serializedVersion: 4

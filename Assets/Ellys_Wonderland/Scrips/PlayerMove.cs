@@ -9,7 +9,8 @@ public class PlayerMove : MonoBehaviour
     public float lowJumpMultiplier = 2f;
     public float fallMultiplier = 2.5f;
     public LayerMask whatIsGround;
-
+    public float bouncepower = 30f;
+    
     private Rigidbody2D rb;
     private bool isGrounded;
 
@@ -49,5 +50,13 @@ public class PlayerMove : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("JumpPad"))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0); // 
+            rb.AddForce(Vector2.up * bouncepower, ForceMode2D.Impulse); 
+        }
     }
 }
