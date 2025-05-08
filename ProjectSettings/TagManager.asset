@@ -5,17 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - NextStage
-  - Trap
   - JumpPad
+  - Trap
+  - NextStage
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Platform
   - Water
   - UI
-  - Platform
+  - Background
   - 
   - 
   - 
