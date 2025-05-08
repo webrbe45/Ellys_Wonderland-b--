@@ -59,4 +59,13 @@ public class PlayerMove : MonoBehaviour
             rb.AddForce(Vector2.up * bouncepower, ForceMode2D.Impulse); 
         }
     }
+        public PokerGate gate;
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("O") || other.CompareTag("X"))
+            {
+                gate.CollectCard(other.gameObject);
+            }
+        }
 }

@@ -8,6 +8,8 @@ TagManager:
   - JumpPad
   - Trap
   - NextStage
+  - O
+  - X
   layers:
   - Default
   - TransparentFX
