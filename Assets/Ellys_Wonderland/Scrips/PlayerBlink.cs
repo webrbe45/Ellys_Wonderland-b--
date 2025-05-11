@@ -61,7 +61,7 @@ public class PlayerBlink : MonoBehaviour
         if (currentHP <= 0)
         {
             Die();
-            return;
+            //return;
         }
 
         Vector2 direction = (transform.position - damageSourcePosition).normalized;

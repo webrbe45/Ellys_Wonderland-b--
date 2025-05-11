@@ -148,8 +148,14 @@ public class HeartQueen : MonoBehaviour
         GameObject leftSoldier = Instantiate(soldierPrefab, leftSpawnPoint.position, Quaternion.identity);
         GameObject rightSoldier = Instantiate(soldierPrefab, rightSpawnPoint.position, Quaternion.identity);
 
-        while ((leftSoldier != null && leftSoldier) || (rightSoldier != null && rightSoldier))
+        while (true)
         {
+            bool leftDead = leftSoldier == null || !leftSoldier;
+            bool rightDead = rightSoldier == null || !rightSoldier;
+
+            if (leftDead && rightDead)
+                break;
+
             yield return null;
         }
 
