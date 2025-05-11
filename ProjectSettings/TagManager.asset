@@ -10,6 +10,7 @@ TagManager:
   - NextStage
   - O
   - X
+  - Enemy
   layers:
   - Default
   - TransparentFX
