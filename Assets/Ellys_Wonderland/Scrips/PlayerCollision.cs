@@ -1,28 +1,26 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    private PlayerBlink blink;
+
+    void Start()
+    {
+        blink = GetComponent<PlayerBlink>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Enemy")
+        if ((collision.transform.tag == "Enemy" || collision.transform.tag == "Trap") && !PlayerManager.isGameOver)
         {
-            HealthManager.health--;
-            if (HealthManager.health <= 0)
-            {
-                PlayerManager.isGameOver = true;
-                gameObject.SetActive(false);
-            }
-            else
-            {
-                StartCoroutine(GetHurt());
-            }
-        }
+            Vector3 hitSource = collision.transform.position;
+            Vector2 knockbackDir = (transform.position - hitSource).normalized;
 
-        if (collision.transform.tag == "Trap")
-        {
+            // 넉백 효과 + 무적 처리
+            blink.TriggerBlink(knockbackDir);
+
+            // 체력 감소
             HealthManager.health--;
             if (HealthManager.health <= 0)
             {
@@ -39,9 +37,7 @@ public class NewBehaviourScript : MonoBehaviour
     IEnumerator GetHurt()
     {
         Physics2D.IgnoreLayerCollision(6, 8);
-        //GetComponent<Animator>().SetLayerWeight(1, 1);
-        yield return new WaitForSeconds(3);
-        //GetComponent<Animator>().SetLayerWeight(1, 0);
+        yield return new WaitForSeconds(3f);
         Physics2D.IgnoreLayerCollision(6, 8, false);
     }
 }

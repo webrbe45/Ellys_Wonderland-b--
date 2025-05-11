@@ -1,15 +1,24 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerBlink : MonoBehaviour
+public class PlayerManager1 : MonoBehaviour
 {
-    private SpriteRenderer sr;
-    private Rigidbody2D rb;
+    [Header("체력 관련")]
+    public int maxHealth = 5;
+    public static int currentHealth;
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
+
+    [Header("무적 및 넉백")]
     public float blinkDuration = 2f;
     public float blinkInterval = 0.1f;
     public float knockbackForce = 5f;
     public float damageCooldown = 2f;
 
+    private SpriteRenderer sr;
+    private Rigidbody2D rb;
     private float damageTimer = 0f;
     private bool isBlinking = false;
     private bool isTouchingTrap = false;
@@ -19,14 +28,17 @@ public class PlayerBlink : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     void Update()
     {
+        UpdateHearts();
+
         if (isTouchingTrap && currentTrap != null && damageTimer <= 0 && !isBlinking)
         {
-            Vector2 dir = (transform.position - currentTrap.transform.position).normalized;
-            TriggerBlink(dir); // 정상적으로 호출되는지 확인
+            Vector2 direction = (transform.position - currentTrap.transform.position).normalized;
+            TakeDamage(1, direction);
         }
 
         if (damageTimer > 0)
@@ -35,9 +47,24 @@ public class PlayerBlink : MonoBehaviour
         }
     }
 
-    // TriggerBlink 메서드 정의
-    public void TriggerBlink(Vector2 knockbackDirection)
+    void UpdateHearts()
     {
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            hearts[i].sprite = i < currentHealth ? fullHeart : emptyHeart;
+        }
+    }
+
+    void TakeDamage(int amount, Vector2 knockbackDirection)
+    {
+        currentHealth -= amount;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+            return;
+        }
+
         rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
         StartCoroutine(BlinkEffect());
         damageTimer = damageCooldown;
@@ -56,6 +83,17 @@ public class PlayerBlink : MonoBehaviour
         sr.enabled = true;
         isBlinking = false;
     }
+
+    private bool isDead = false;
+
+    void Die()
+    {
+        isDead = true;
+        sr.enabled = false; 
+        rb.velocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Static; 
+    }
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {

@@ -13,7 +13,7 @@ public class HealthManager : MonoBehaviour
 
     void Awake()
     {
-        health = 3;
+        health = 5;
     }
     // Update is called once per frame
     void Update()
