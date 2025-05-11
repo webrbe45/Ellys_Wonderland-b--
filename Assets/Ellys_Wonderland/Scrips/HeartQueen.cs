@@ -29,6 +29,13 @@ public class HeartQueen : MonoBehaviour
         StartCoroutine(SkillRoutine());
     }
 
+    private void EnterGroggy()
+    {
+        currentState = State.Groggy;
+        canUseSkill = false;
+        Debug.Log("그로기 상태 진입");
+        StartCoroutine(GroggyTimer());
+    }
     public void TakeStompDamage()
     {
         if (currentState == State.Groggy && !isDead)
@@ -52,14 +59,6 @@ public class HeartQueen : MonoBehaviour
         isDead = true;
         Debug.Log("하트여왕 사망!");
         Destroy(gameObject);
-    }
-
-    private void EnterGroggy()
-    {
-        currentState = State.Groggy;
-        canUseSkill = false;
-        Debug.Log("그로기 상태 진입");
-        StartCoroutine(GroggyTimer());
     }
 
     private void ExitGroggy()

@@ -55,8 +55,24 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("JumpPad"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0); // 
+            rb.velocity = new Vector2(rb.velocity.x, 0); 
             rb.AddForce(Vector2.up * bouncepower, ForceMode2D.Impulse); 
+        }
+        if (collision.gameObject.CompareTag("HeartQueen"))
+        {
+            Vector2 contactPoint = collision.contacts[0].point;
+            Vector2 playerCenter = transform.position;
+            if (contactPoint.y < playerCenter.y - 0.1f)
+            {
+                HeartQueen queen = collision.gameObject.GetComponent<HeartQueen>();
+                if (queen != null)
+                {
+                    queen.TakeStompDamage();
+
+                    Rigidbody2D rb = GetComponent<Rigidbody2D>();
+                    rb.velocity = new Vector2(rb.velocity.x, 10f);
+                }
+            }
         }
     }
         public PokerGate gate;
@@ -68,5 +84,4 @@ public class PlayerMove : MonoBehaviour
             FindObjectOfType<PokerGate>().CollectCard(collision.gameObject);
         }
     }
-
 }
