@@ -61,11 +61,12 @@ public class PlayerMove : MonoBehaviour
     }
         public PokerGate gate;
 
-        void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("O") || collision.CompareTag("X"))
         {
-            if (other.CompareTag("O") || other.CompareTag("X"))
-            {
-                gate.CollectCard(other.gameObject);
-            }
+            FindObjectOfType<PokerGate>().CollectCard(collision.gameObject);
         }
+    }
+
 }

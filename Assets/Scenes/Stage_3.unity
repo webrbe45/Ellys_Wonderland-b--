@@ -1297,6 +1297,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1022980178 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8194247590867099282, guid: 422cf98a0116e22438a7aad2fcc21eac, type: 3}
+  m_PrefabInstance: {fileID: 8464579267805722501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d3db1ba1909f040910e8e8e20655d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1125122417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,6 +1896,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1562501413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4965714229627384927, guid: d18be08cdfb3fb04889cce777637c56e, type: 3}
+  m_PrefabInstance: {fileID: 8299774516319617593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d3db1ba1909f040910e8e8e20655d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1566944388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,9 +2173,69 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2228394711916895022, guid: d18be08cdfb3fb04889cce777637c56e, type: 3}
     - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
-      propertyPath: cardSpawnPoints.Array.size
-      value: 6
+      propertyPath: allCards.Array.size
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: allCards.Array.data[0]
+      value: 
+      objectReference: {fileID: 1022980178}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: allCards.Array.data[1]
+      value: 
+      objectReference: {fileID: 1562501413}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: allCards.Array.data[2]
+      value: 
+      objectReference: {fileID: 876274438}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: allCards.Array.data[3]
+      value: 
+      objectReference: {fileID: 2040806039}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: allCards.Array.data[4]
+      value: 
+      objectReference: {fileID: 1415577170}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: allCards.Array.data[5]
+      value: 
+      objectReference: {fileID: 1014904233}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: allCards.Array.data[6]
+      value: 
+      objectReference: {fileID: 585707442}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: cardSpawnPoints.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: cardSpawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1506340618}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: cardSpawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1566944389}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: cardSpawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1125122418}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: cardSpawnPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 656032799}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: cardSpawnPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 522412353}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: cardSpawnPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 1448674906}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: cardSpawnPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 1574381364}
     - target: {fileID: 2835165863272780316, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
       propertyPath: m_Name
       value: Next Stage

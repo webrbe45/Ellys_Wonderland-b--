@@ -2,18 +2,27 @@ using UnityEngine;
 
 public class CardItem : MonoBehaviour
 {
-    private PokerGate gate;
+    private Vector3 originalPosition;
+    private SpriteRenderer sr;
+    private Collider2D col;
 
     void Start()
     {
-        gate = FindObjectOfType<PokerGate>();
+        originalPosition = transform.position;
+        sr = GetComponent<SpriteRenderer>();
+        col = GetComponent<Collider2D>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void Hide()
     {
-        if (other.CompareTag("Player") && gate != null)
-        {
-            gate.CollectCard(gameObject);
-        }
+        sr.enabled = false;
+        col.enabled = false;
+    }
+
+    public void Show()
+    {
+        transform.position = originalPosition;
+        sr.enabled = true;
+        col.enabled = true;
     }
 }

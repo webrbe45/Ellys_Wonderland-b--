@@ -5,39 +5,61 @@ using UnityEngine.SceneManagement;
 public class PokerGate : MonoBehaviour
 {
     public string nextSceneName;
-
-    public GameObject correctCardPrefab;  // 정답 카드 (Tag: "O")
-    public GameObject wrongCardPrefab;    // 오답 카드 (Tag: "X")
-    public Transform[] cardSpawnPoints;   // 카드 생성 위치들 (5개)
+    public List<CardItem> allCards = new List<CardItem>();
 
     private int correctCardCount = 0;
     private bool hasWrongCard = false;
     private bool isGateOpen = false;
 
-    private List<GameObject> collectedCards = new List<GameObject>();
-
     void Update()
     {
-        if (correctCardCount == 5)
+        if (correctCardCount == 5 && !hasWrongCard)
         {
-            if (hasWrongCard)
-            {
-                ResetCards(); // 실패 시 카드 리셋
-            }
-            else
-            {
-                isGateOpen = true;
-            }
+            isGateOpen = true;
         }
+    }
+
+    public void CollectCard(GameObject cardObj)
+    {
+        CardItem card = cardObj.GetComponent<CardItem>();
+
+        if (cardObj.CompareTag("O"))
+        {
+            correctCardCount++;
+        }
+        else if (cardObj.CompareTag("X"))
+        {
+            hasWrongCard = true;
+        }
+
+        card.Hide();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && isGateOpen)
+        if (!collision.CompareTag("Player")) return;
+
+        if (isGateOpen)
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             SceneManager.LoadScene(nextSceneName);
         }
+        else if (hasWrongCard)
+        {
+            ResetGateState();
+
+            foreach (CardItem card in allCards)
+            {
+                card.Show();
+            }
+        }
+    }
+
+    private void ResetGateState()
+    {
+        correctCardCount = 0;
+        hasWrongCard = false;
+        isGateOpen = false;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -45,46 +67,8 @@ public class PokerGate : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            player.transform.position = Vector3.zero;
+            player.transform.position = new Vector3(0f, 0f, 0f);
         }
         SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    public void CollectCard(GameObject card)
-    {
-        if (card.CompareTag("O"))
-        {
-            correctCardCount++;
-        }
-        else if (card.CompareTag("X"))
-        {
-            hasWrongCard = true;
-        }
-
-        collectedCards.Add(card);
-        card.SetActive(false);
-    }
-
-    private void ResetCards()
-    {
-        correctCardCount = 0;
-        hasWrongCard = false;
-        isGateOpen = false;
-
-        foreach (GameObject card in collectedCards)
-        {
-            if (card != null) Destroy(card);
-        }
-
-        collectedCards.Clear();
-
-        // 카드 재소환
-        foreach (Transform spawnPoint in cardSpawnPoints)
-        {
-            float rand = Random.value;
-            GameObject cardPrefab = rand < 0.7f ? correctCardPrefab : wrongCardPrefab;
-
-            Instantiate(cardPrefab, spawnPoint.position, Quaternion.identity);
-        }
     }
 }
