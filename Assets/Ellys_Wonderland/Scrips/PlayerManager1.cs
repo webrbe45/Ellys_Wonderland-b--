@@ -112,4 +112,5 @@ public class PlayerManager1 : MonoBehaviour
             currentTrap = null;
         }
     }
+
 }
