@@ -15,7 +15,7 @@ public class PlayerBlink : MonoBehaviour
     private bool isBlinking = false;
     private bool isTouchingTrap = false;
     private GameObject currentTrap;
-    private int currentHP;
+    public int currentHP;
 
     void Start()
     {
@@ -26,7 +26,8 @@ public class PlayerBlink : MonoBehaviour
 
     void Update()
     {
-        if (isTouchingTrap && damageTimer <= 0 && !isBlinking)
+        //currentTrap != null 추가
+        if (isTouchingTrap && currentTrap != null && damageTimer <= 0 && !isBlinking)
         {
             TakeDamage(1, currentTrap.transform.position);
         }
@@ -61,7 +62,7 @@ public class PlayerBlink : MonoBehaviour
         if (currentHP <= 0)
         {
             Die();
-            //return;
+            return;
         }
 
         Vector2 direction = (transform.position - damageSourcePosition).normalized;
@@ -86,6 +87,12 @@ public class PlayerBlink : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject); 
+        // 플레이어가 사망할 때 모든 연결된 참조 정리
+        StopAllCoroutines();
+        isTouchingTrap = false;
+        currentTrap = null;
+
+        // 게임오브젝트 파괴
+        Destroy(gameObject);
     }
 }

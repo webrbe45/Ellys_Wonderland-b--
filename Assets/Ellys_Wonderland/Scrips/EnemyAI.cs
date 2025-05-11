@@ -33,6 +33,23 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
+        // player가 null인지 확인
+        if (player == null)
+        {
+            // player를 다시 찾아보기
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                player = playerObj.transform;
+            }
+            else
+            {
+                // player가 없으면 패트롤만 수행
+                Patrol();
+                return;
+            }
+        }
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer < detectionRange)
         {
