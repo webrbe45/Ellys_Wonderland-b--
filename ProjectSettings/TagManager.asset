@@ -11,6 +11,7 @@ TagManager:
   - O
   - X
   - Enemy
+  - HeartQueen
   layers:
   - Default
   - TransparentFX
