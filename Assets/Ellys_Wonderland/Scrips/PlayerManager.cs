@@ -28,6 +28,14 @@ public class PlayerManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (isGameOver)
+        {
+            gameOverScreen.SetActive(true);
+            Time.timeScale = 0f; // 게임 일시정지 (선택사항)
+        }
+    }
     public void ReplayLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
