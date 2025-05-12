@@ -192,7 +192,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  bouncepower: 30
+  bouncepower: 15
   gate: {fileID: 0}
 --- !u!114 &1602644833746198516
 MonoBehaviour:
