@@ -26,7 +26,7 @@ public class PlayerBlink : MonoBehaviour
         if (isTouchingTrap && currentTrap != null && damageTimer <= 0 && !isBlinking)
         {
             Vector2 dir = (transform.position - currentTrap.transform.position).normalized;
-            TriggerBlink(dir); // 정상적으로 호출되는지 확인
+            TriggerBlink(dir); 
         }
 
         if (damageTimer > 0)
@@ -34,8 +34,6 @@ public class PlayerBlink : MonoBehaviour
             damageTimer -= Time.deltaTime;
         }
     }
-
-    // TriggerBlink 메서드 정의
     public void TriggerBlink(Vector2 knockbackDirection)
     {
         rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);

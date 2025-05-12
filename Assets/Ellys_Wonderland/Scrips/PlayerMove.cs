@@ -47,10 +47,6 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("JumpPad"))
