@@ -47,6 +47,7 @@ public class PlayerManager1 : MonoBehaviour
         }
     }
 
+       
     void UpdateHearts()
     {
         for (int i = 0; i < hearts.Length; i++)
@@ -112,4 +113,12 @@ public class PlayerManager1 : MonoBehaviour
             currentTrap = null;
         }
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Note") && damageTimer <= 0 && !isBlinking)
+        {
+            TakeDamage(1, Vector2.zero); 
+        }
+    }
+
 }
