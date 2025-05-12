@@ -12,6 +12,8 @@ TagManager:
   - X
   - Enemy
   - HeartQueen
+  - wall
+  - Note
   layers:
   - Default
   - TransparentFX
