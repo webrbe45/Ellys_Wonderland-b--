@@ -2104,6 +2104,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2228394711916895022, guid: d18be08cdfb3fb04889cce777637c56e, type: 3}
     - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
+      propertyPath: nextSceneName
+      value: HeartQueen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488292890670085192, guid: 5274a6d294407954c8f1f67ef849f04a, type: 3}
       propertyPath: wrongCardPrefab
       value: 
       objectReference: {fileID: 265257934113719010, guid: 422cf98a0116e22438a7aad2fcc21eac, type: 3}
