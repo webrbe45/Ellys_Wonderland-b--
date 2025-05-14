@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OnClickNewGame()
     {
-        SceneManager.LoadScene("Stage_1");
+        SceneManager.LoadScene("Stage_1_Scense");
     }
 
     public void OnClickOption()
