@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainRobby.unity
     guid: 0bf1b81ec0a4153428d8bac7fde22ee7
   - enabled: 1
+    path: Assets/Scenes/Stage_1_Scense.unity
+    guid: 018057ca8fec99a449ae95061e827cf7
+  - enabled: 1
     path: Assets/Scenes/Stage_1.unity
     guid: c818c2b91cf60b04882655cfbcaa38e6
   - enabled: 1
