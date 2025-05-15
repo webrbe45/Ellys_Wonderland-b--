@@ -17,6 +17,9 @@ public class PlayerManager1 : MonoBehaviour
     public float knockbackForce = 5f;
     public float damageCooldown = 2f;
 
+    [Header("게임 오버")]
+    public GameObject gameOverPanel; 
+
     private SpriteRenderer sr;
     private Rigidbody2D rb;
     private float damageTimer = 0f;
@@ -24,11 +27,16 @@ public class PlayerManager1 : MonoBehaviour
     private bool isTouchingTrap = false;
     private GameObject currentTrap;
 
+    private bool isDead = false;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false); // 시작 시 비활성화
     }
 
     void Update()
@@ -47,7 +55,6 @@ public class PlayerManager1 : MonoBehaviour
         }
     }
 
-       
     void UpdateHearts()
     {
         for (int i = 0; i < hearts.Length; i++)
@@ -85,16 +92,20 @@ public class PlayerManager1 : MonoBehaviour
         isBlinking = false;
     }
 
-    private bool isDead = false;
-
     void Die()
     {
         isDead = true;
-        sr.enabled = false; 
+        sr.enabled = false;
         rb.velocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Static; 
-    }
+        rb.bodyType = RigidbodyType2D.Static;
 
+        Time.timeScale = 0f;
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true); 
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -113,12 +124,12 @@ public class PlayerManager1 : MonoBehaviour
             currentTrap = null;
         }
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Note") && damageTimer <= 0 && !isBlinking)
         {
-            TakeDamage(1, Vector2.zero); 
+            TakeDamage(1, Vector2.zero);
         }
     }
-
 }
