@@ -21,6 +21,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
         isGrounded = Physics2D.OverlapCircle(transform.position + Vector3.down * 0.5f, 0.2f, whatIsGround);
 
         if (Input.GetKey(KeyCode.A))

@@ -33,10 +33,18 @@ public class PlayerManager1 : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        Time.timeScale = 1f;
         currentHealth = maxHealth;
+        isDead = false;
+
+        sr.enabled = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 1f;
 
         if (gameOverPanel != null)
-            gameOverPanel.SetActive(false); // 시작 시 비활성화
+            gameOverPanel.SetActive(false); 
+
     }
 
     void Update()
@@ -103,9 +111,10 @@ public class PlayerManager1 : MonoBehaviour
 
         if (gameOverPanel != null)
         {
-            gameOverPanel.SetActive(true); 
+            gameOverPanel.SetActive(true);
         }
     }
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
