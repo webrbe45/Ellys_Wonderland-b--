@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeartQueen : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class HeartQueen : MonoBehaviour
     {
         currentHP = maxHP;
         StartCoroutine(SkillRoutine());
+
+
     }
 
 
@@ -53,7 +56,17 @@ public class HeartQueen : MonoBehaviour
         isDead = true;
         Debug.Log("ÇÏÆ®¿©¿Õ »ç¸Á!");
         Destroy(gameObject);
+        Debug.Log($"[TimelineSceneLoader] Loading scene: {nextSceneName}" );
+        SceneManager.LoadScene(nextSceneName);
     }
+
+    public string nextSceneName;
+
+    public void LoadNextScene()
+    {
+        
+    }
+
     private void EnterGroggy()
     {
         currentState = State.Groggy;
@@ -162,4 +175,6 @@ public class HeartQueen : MonoBehaviour
     }
 
     public bool IsGroggy() => currentState == State.Groggy;
+
+
 }
