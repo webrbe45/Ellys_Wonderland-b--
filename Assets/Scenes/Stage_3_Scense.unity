@@ -154,7 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: f93f4c5474804d1408785d49b0149b93, type: 2}
+    - {fileID: 11400000, guid: 071f28856164c2a4ea48215a7275ef5c, type: 2}
+    - {fileID: 0}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -182,6 +183,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &101879235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,7 +614,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1294350503}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 70aefdf7f6e72ea409f311e8576e5e81, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 812c1ac237fcaee4b86f31f9470fc037, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -635,6 +638,22 @@ PlayableDirector:
     value: {fileID: 411307703}
   - key: {fileID: -7843051750318607013, guid: 70aefdf7f6e72ea409f311e8576e5e81, type: 2}
     value: {fileID: 316675287}
+  - key: {fileID: -3256894555308514086, guid: 812c1ac237fcaee4b86f31f9470fc037, type: 2}
+    value: {fileID: 1276706879}
+  - key: {fileID: -3445023393512191184, guid: 812c1ac237fcaee4b86f31f9470fc037, type: 2}
+    value: {fileID: 1951422900}
+  - key: {fileID: -8586818057591899820, guid: 812c1ac237fcaee4b86f31f9470fc037, type: 2}
+    value: {fileID: 1719975711}
+  - key: {fileID: -6942842050635509548, guid: 812c1ac237fcaee4b86f31f9470fc037, type: 2}
+    value: {fileID: 751624743}
+  - key: {fileID: 6699471935127065986, guid: 812c1ac237fcaee4b86f31f9470fc037, type: 2}
+    value: {fileID: 783189416}
+  - key: {fileID: 3797195576089137046, guid: 812c1ac237fcaee4b86f31f9470fc037, type: 2}
+    value: {fileID: 411307703}
+  - key: {fileID: -4071536840574346949, guid: 812c1ac237fcaee4b86f31f9470fc037, type: 2}
+    value: {fileID: 316675287}
+  - key: {fileID: 6950458767797833509, guid: 812c1ac237fcaee4b86f31f9470fc037, type: 2}
+    value: {fileID: 101879234}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1294350505
