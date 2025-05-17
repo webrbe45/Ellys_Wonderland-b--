@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Elly_idle_0
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1578
+        width: 588
+        height: 1063
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d828181686c9963419ecf948bc418707
+      internalID: 1799682791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_idle_1
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 1584
+        width: 586
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfd02a9b8d563440beb63f64d81aa14
+      internalID: 976522693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_idle_2
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 1576
+        width: 608
+        height: 1020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83430cea32a6dfd4bbcdbf02aa41b1a4
+      internalID: 1298388254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_idle_3
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 1580
+        width: 621
+        height: 988
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1d3b3791db65a4786da01cd414ddb6
+      internalID: -553725062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_idle_4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 258
+        width: 608
+        height: 1019
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede5b05621404b3408e5bdb90e0308b6
+      internalID: 63963412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_idle_5
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 262
+        width: 586
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225b213fa5c07004aac78c1398e2f6b4
+      internalID: -2043954229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_idle_6
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 264
+        width: 588
+        height: 1063
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e9c2edc4d5a254fa39ce376c71e6ae
+      internalID: -1720277462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_idle_7
+      rect:
+        serializedVersion: 2
+        x: 3086
+        y: 264
+        width: 581
+        height: 1051
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db0f0430a5abc9499252d8f1b17789d
+      internalID: -1129743685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +274,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Elly_idle_0: 1799682791
+      Elly_idle_1: 976522693
+      Elly_idle_2: 1298388254
+      Elly_idle_3: -553725062
+      Elly_idle_4: 63963412
+      Elly_idle_5: -2043954229
+      Elly_idle_6: -1720277462
+      Elly_idle_7: -1129743685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
