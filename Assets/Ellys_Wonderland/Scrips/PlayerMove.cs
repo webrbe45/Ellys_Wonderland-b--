@@ -4,39 +4,71 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float speed;
-    public float jumpPower;
+    [Header("Movement Settings")]
+    public float speed = 5f;
+    public float jumpPower = 10f;
     public float lowJumpMultiplier = 2f;
     public float fallMultiplier = 2.5f;
-    public LayerMask whatIsGround;
     public float bouncepower = 30f;
-    
+
+    [Header("Ground Check")]
+    public LayerMask whatIsGround;
+    public float groundCheckRadius = 0.2f;
+    public Vector2 groundCheckOffset = new Vector2(0, -0.5f);
+
+    [Header("References")]
+    public PokerGate pokerGate;
+
     private Rigidbody2D rb;
     private bool isGrounded;
 
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        if (pokerGate == null)
+        {
+            pokerGate = FindObjectOfType<PokerGate>();
+        }
     }
 
-    void Update()
+    private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(transform.position + Vector3.down * 0.5f, 0.2f, whatIsGround);
+        CheckGround();
+        HandleInput();
+        ApplyGravityModifiers();
+    }
 
+    private void CheckGround()
+    {
+        Vector2 groundCheckPosition = (Vector2)transform.position + groundCheckOffset;
+        isGrounded = Physics2D.OverlapCircle(groundCheckPosition, groundCheckRadius, whatIsGround);
+    }
+
+    private void HandleInput()
+    {
+        float horizontalInput = 0f;
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(-speed, 0, 0);
+            horizontalInput = -1f;
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(speed, 0, 0);
+            horizontalInput = 1f;
         }
 
+        transform.Translate(horizontalInput * speed * Time.deltaTime, 0, 0);
+
+        // Jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
+    }
 
+    private void ApplyGravityModifiers()
+    {
         if (rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -47,37 +79,61 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("JumpPad"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0); 
-            rb.AddForce(Vector2.up * bouncepower, ForceMode2D.Impulse); 
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+            rb.AddForce(Vector2.up * bouncepower, ForceMode2D.Impulse);
+            return;
         }
+
         if (collision.gameObject.CompareTag("HeartQueen"))
         {
-            Vector2 contactPoint = collision.contacts[0].point;
-            Vector2 playerCenter = transform.position;
-            if (contactPoint.y < playerCenter.y - 0.1f)
-            {
-                HeartQueen queen = collision.gameObject.GetComponent<HeartQueen>();
-                if (queen != null)
-                {
-                    queen.TakeStompDamage();
+            HandleHeartQueenCollision(collision);
+        }
+    }
 
-                    Rigidbody2D rb = GetComponent<Rigidbody2D>();
-                    rb.velocity = new Vector2(rb.velocity.x, 10f);
-                }
+    private void HandleHeartQueenCollision(Collision2D collision)
+    {
+        if (collision.contacts.Length == 0)
+        {
+            return;
+        }
+
+        Vector2 contactPoint = collision.contacts[0].point;
+        Vector2 playerCenter = transform.position;
+
+        if (contactPoint.y < playerCenter.y - 0.1f)
+        {
+            HeartQueen queen = collision.gameObject.GetComponent<HeartQueen>();
+            if (queen != null)
+            {
+                queen.TakeStompDamage();
+                rb.velocity = new Vector2(rb.velocity.x, 10f);
             }
         }
     }
-        public PokerGate gate;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("O") || collision.CompareTag("X"))
         {
-            FindObjectOfType<PokerGate>().CollectCard(collision.gameObject);
+            if (pokerGate != null)
+            {
+                pokerGate.CollectCard(collision.gameObject);
+            }
+            else
+            {
+                Debug.LogWarning("PokerGate reference is missing!");
+            }
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Vector2 groundCheckPosition = (Vector2)transform.position + groundCheckOffset;
+        Gizmos.DrawWireSphere(groundCheckPosition, groundCheckRadius);
     }
 }
