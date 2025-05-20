@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 // player가 없으면 패트롤만 수행
-                Patrol();
+                //Patrol();
                 return;
             }
         }
@@ -67,11 +67,11 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            Patrol();
+            //Patrol();
         }
     }
 
-    void Patrol()
+    /*void Patrol()
     {
         float move = (movingRight ? 1 : -1) * patrolSpeed * Time.deltaTime;
         transform.Translate(move, 0, 0);
@@ -84,7 +84,7 @@ public class EnemyAI : MonoBehaviour
             scale.x = Mathf.Abs(scale.x) * (movingRight ? 1 : -1);
             transform.localScale = scale;
         }
-    }
+    }*/
 
 
     void OnCollisionEnter2D(Collision2D collision)

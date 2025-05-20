@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c6af9092cc42da4a8c285a36ceab2c6
+guid: 07178637ced8aa9479fc84a832cb08f1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 56, y: 252, z: 274, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -97,169 +97,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Elly_idle_0
+      name: soldier_test_0
       rect:
         serializedVersion: 2
-        x: 343
-        y: 1578
-        width: 588
-        height: 1063
+        x: 62
+        y: 253
+        width: 163
+        height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 5, z: 6, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d828181686c9963419ecf948bc418707
-      internalID: 1799682791
+      spriteID: ca57eea2257be23449864e4bafa9cd4b
+      internalID: 342569056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elly_idle_1
+      name: soldier_test_1
       rect:
         serializedVersion: 2
-        x: 1283
-        y: 1584
-        width: 586
-        height: 1027
+        x: 274
+        y: 254
+        width: 170
+        height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abfd02a9b8d563440beb63f64d81aa14
-      internalID: 976522693
+      spriteID: 4657475eecf42b841961d0a3a76e9df1
+      internalID: 1984710749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elly_idle_2
+      name: soldier_test_2
       rect:
         serializedVersion: 2
-        x: 2171
-        y: 1576
-        width: 608
-        height: 1020
+        x: 51
+        y: 24
+        width: 180
+        height: 225
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83430cea32a6dfd4bbcdbf02aa41b1a4
-      internalID: 1298388254
+      spriteID: c9188dd901228e34eb8e710dacdb44f2
+      internalID: -662307072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elly_idle_3
+      name: soldier_test_3
       rect:
         serializedVersion: 2
-        x: 3054
-        y: 1580
-        width: 621
-        height: 988
+        x: 276
+        y: 24
+        width: 179
+        height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f1d3b3791db65a4786da01cd414ddb6
-      internalID: -553725062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Elly_idle_4
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 258
-        width: 608
-        height: 1019
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ede5b05621404b3408e5bdb90e0308b6
-      internalID: 63963412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Elly_idle_5
-      rect:
-        serializedVersion: 2
-        x: 1287
-        y: 262
-        width: 586
-        height: 1027
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 225b213fa5c07004aac78c1398e2f6b4
-      internalID: -2043954229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Elly_idle_6
-      rect:
-        serializedVersion: 2
-        x: 2175
-        y: 264
-        width: 588
-        height: 1063
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7e9c2edc4d5a254fa39ce376c71e6ae
-      internalID: -1720277462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Elly_idle_7
-      rect:
-        serializedVersion: 2
-        x: 3086
-        y: 264
-        width: 581
-        height: 1051
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3db0f0430a5abc9499252d8f1b17789d
-      internalID: -1129743685
+      spriteID: a2ee7d4c839d44f45b332d7a535197c9
+      internalID: -348030450
       vertices: []
       indices: 
       edges: []
@@ -268,21 +184,17 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Elly_idle_0: 1799682791
-      Elly_idle_1: 976522693
-      Elly_idle_2: 1298388254
-      Elly_idle_3: -553725062
-      Elly_idle_4: 63963412
-      Elly_idle_5: -2043954229
-      Elly_idle_6: -1720277462
-      Elly_idle_7: -1129743685
+      soldier_test_0: 342569056
+      soldier_test_1: 1984710749
+      soldier_test_2: -662307072
+      soldier_test_3: -348030450
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

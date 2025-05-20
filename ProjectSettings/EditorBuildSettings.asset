@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HeartQueen.unity
     guid: 5f9e482d33439c04184df3645d64bd04
+  - enabled: 1
+    path: Assets/Scenes/Stage_3_Scense.unity
+    guid: 72a0d2b7c10992b46a359d8901e929eb
   m_configObjects: {}
