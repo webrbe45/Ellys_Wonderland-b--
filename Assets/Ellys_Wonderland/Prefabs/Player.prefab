@@ -198,8 +198,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fullHeart: {fileID: 21300000, guid: 26c038ab27728de4c99ae34a51154e3a, type: 3}
-  emptyHeart: {fileID: 21300000, guid: cd83a6671d0b5ef45bee2613bd7f53dd, type: 3}
+  fullHeart: {fileID: 1519557362, guid: 26c038ab27728de4c99ae34a51154e3a, type: 3}
+  emptyHeart: {fileID: -2054317752, guid: cd83a6671d0b5ef45bee2613bd7f53dd, type: 3}
   blinkDuration: 2
   blinkInterval: 0.1
   knockbackForce: 5
