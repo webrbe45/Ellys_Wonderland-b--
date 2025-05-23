@@ -27,7 +27,7 @@ public class PlayerManager1 : MonoBehaviour
     private bool isTouchingTrap = false;
     private GameObject currentTrap;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     void Start()
     {
@@ -109,10 +109,7 @@ public class PlayerManager1 : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        if (gameOverPanel != null)
-        {
-            gameOverPanel.SetActive(true);
-        }
+
     }
 
 
