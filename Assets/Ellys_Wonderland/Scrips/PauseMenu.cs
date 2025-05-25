@@ -13,7 +13,6 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        // 게임 시작 시 패널을 숨깁니다.
         pauseMenuCanvas.SetActive(false);
     }
 

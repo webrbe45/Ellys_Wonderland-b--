@@ -39,6 +39,25 @@ public class PlayerManager : MonoBehaviour
             gameOverScreen.SetActive(true);
             Time.timeScale = 0f;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (optionScreen.activeSelf)
+            {
+                optionScreen.SetActive(false);
+            }
+            else
+            {
+                if (pauseMenuScreen.activeSelf)
+                {
+                    ResumeGame();
+                }
+                else
+                {
+                    PauseGame(); 
+                }
+            }
+        }
     }
 
     public void ReplayLevel()
@@ -72,6 +91,10 @@ public class PlayerManager : MonoBehaviour
         if (gameOverScreen.activeSelf)
         {
             gameOverScreen.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            optionScreen.SetActive(true);
         }
     }
 
