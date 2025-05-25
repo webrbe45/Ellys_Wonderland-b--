@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Elly_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 3762
+        width: 671
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f251c8dfd99231b4ab67886239930657
+      internalID: 2059579327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 3762
+        width: 666
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3774c7f7e1d80d143adafda436f84326
+      internalID: 508222461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 3767
+        width: 676
+        height: 944
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3e4043147b20642a02cdda4668ab3b
+      internalID: -45671905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 3826
+        width: 656
+        height: 986
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bb0e79fd44c1c48b26e77c45fdcff6
+      internalID: 1783513203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 2545
+        width: 725
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0a4b9db9839e748b8c2c712ecda67b
+      internalID: 344598671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2726
+        width: 771
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1da9ee6c20bb2e40845b4e093edaf25
+      internalID: -374274409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 2810
+        width: 592
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e5c4f5fb18e4a419d5f08a61ce7ea1
+      internalID: 909823640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 3069
+        y: 2648
+        width: 737
+        height: 847
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b4bf26bdc4ae34bbb8a3f93d3319e0
+      internalID: -2120752029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1330
+        width: 673
+        height: 907
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec8572a0e63e6f4abe3185a578a2c12
+      internalID: 300556673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 1287
+        width: 622
+        height: 948
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a1300c8cc3e2741b6d1dbbc39dd272
+      internalID: -796995094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 1247
+        width: 592
+        height: 1019
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bb3331dda96e04caa3bd951acaaab9
+      internalID: -528416993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 3086
+        y: 1249
+        width: 643
+        height: 962
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbbbd74642995442b1b1c06409df6af
+      internalID: -918781215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_12
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 173
+        width: 620
+        height: 916
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d329a7c773629442a3c1d5790df1c48
+      internalID: -1916636727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_13
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 168
+        width: 618
+        height: 783
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3c7727fac50ce428d6ef08c43a537c
+      internalID: -1893070630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_14
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 173
+        width: 606
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749b5679b7815b74a9e9c61206548346
+      internalID: -1106259118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Jump_15
+      rect:
+        serializedVersion: 2
+        x: 3234
+        y: 171
+        width: 604
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc515669397db0e47af7107c43b604e3
+      internalID: -1174263003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +442,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Elly_Jump_0: 2059579327
+      Elly_Jump_1: 508222461
+      Elly_Jump_10: -528416993
+      Elly_Jump_11: -918781215
+      Elly_Jump_12: -1916636727
+      Elly_Jump_13: -1893070630
+      Elly_Jump_14: -1106259118
+      Elly_Jump_15: -1174263003
+      Elly_Jump_2: -45671905
+      Elly_Jump_3: 1783513203
+      Elly_Jump_4: 344598671
+      Elly_Jump_5: -374274409
+      Elly_Jump_6: 909823640
+      Elly_Jump_7: -2120752029
+      Elly_Jump_8: 300556673
+      Elly_Jump_9: -796995094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

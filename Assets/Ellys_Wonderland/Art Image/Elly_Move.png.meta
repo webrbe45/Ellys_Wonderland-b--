@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,427 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Elly_Move_0
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3655
+        width: 639
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ad746086632b845a6672d1c7d2db5b
+      internalID: 1093280780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_1
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 3664
+        width: 651
+        height: 933
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2246161bbfd1b7240923a68d8b28229b
+      internalID: -2085951103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_2
+      rect:
+        serializedVersion: 2
+        x: 2506
+        y: 3657
+        width: 672
+        height: 966
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f0e0fcbff84e94689d54842fc0514a
+      internalID: 1730946709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_3
+      rect:
+        serializedVersion: 2
+        x: 3611
+        y: 3650
+        width: 660
+        height: 999
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfc1ad8c04cc0e4d918144370a2bd82
+      internalID: -1399265618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_4
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 2513
+        width: 644
+        height: 1026
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def8021efd65fad42ba3cd55844e3129
+      internalID: -904212300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_5
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 2515
+        width: 641
+        height: 1043
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adcbb3eb3d32bf40bcd435d3844b587
+      internalID: 1985852442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_6
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 2506
+        width: 642
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5b6ab4cbdf5cc4c974eaff2a344ead
+      internalID: 948672865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_7
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 2518
+        width: 642
+        height: 1029
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa50c71c7bff87d41bbb715d29d78ebe
+      internalID: -2047296462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_8
+      rect:
+        serializedVersion: 2
+        x: 3923
+        y: 2511
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0051b0716b89484d96991ef138bab51
+      internalID: -552730397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_9
+      rect:
+        serializedVersion: 2
+        x: 2845
+        y: 2480
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4b485b35034c74795530e17bb55886
+      internalID: 375883979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_10
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1385
+        width: 639
+        height: 999
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5beb6d5da8bbee84cb2a9bbb877941a4
+      internalID: -1215741153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_11
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1399
+        width: 651
+        height: 933
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e17298ba4084b4f978c88c4489054c
+      internalID: -2061722232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_12
+      rect:
+        serializedVersion: 2
+        x: 2433
+        y: 1395
+        width: 672
+        height: 965
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036f6f26eb2628340acea0aa007b5003
+      internalID: -803879970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_13
+      rect:
+        serializedVersion: 2
+        x: 3498
+        y: 1388
+        width: 660
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c98a1fcef731b4bbb7bee6c127ae06
+      internalID: -1701804202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_14
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 229
+        width: 644
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18c6826433edfa4a8c129072a05606d
+      internalID: -1288989309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_15
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 213
+        width: 640
+        height: 1043
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e10d7b8636f374d80de61c8d975ef5
+      internalID: 1721312620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_16
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 236
+        width: 641
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3f89b0d4b8b5846960a398283c3532
+      internalID: -815172812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_17
+      rect:
+        serializedVersion: 2
+        x: 3580
+        y: 227
+        width: 639
+        height: 1029
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1288745e45993334ba23ec987b72452e
+      internalID: -2007173375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_18
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 220
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9299f05ce2384419c4009a7edbe36d
+      internalID: -552539284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elly_Move_19
+      rect:
+        serializedVersion: 2
+        x: 2896
+        y: 210
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35efe9e41bb43f849aec051cc2cb776d
+      internalID: -126915049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +526,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Elly_Move_0: 1093280780
+      Elly_Move_1: -2085951103
+      Elly_Move_10: -1215741153
+      Elly_Move_11: -2061722232
+      Elly_Move_12: -803879970
+      Elly_Move_13: -1701804202
+      Elly_Move_14: -1288989309
+      Elly_Move_15: 1721312620
+      Elly_Move_16: -815172812
+      Elly_Move_17: -2007173375
+      Elly_Move_18: -552539284
+      Elly_Move_19: -126915049
+      Elly_Move_2: 1730946709
+      Elly_Move_3: -1399265618
+      Elly_Move_4: -904212300
+      Elly_Move_5: 1985852442
+      Elly_Move_6: 948672865
+      Elly_Move_7: -2047296462
+      Elly_Move_8: -552730397
+      Elly_Move_9: 375883979
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
