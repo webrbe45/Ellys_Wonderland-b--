@@ -44,18 +44,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (optionScreen.activeSelf)
             {
-                optionScreen.SetActive(false);
-            }
-            else
-            {
-                if (pauseMenuScreen.activeSelf)
-                {
-                    ResumeGame();
-                }
-                else
-                {
-                    PauseGame(); 
-                }
+                CloseOptions();
             }
         }
     }
@@ -89,17 +78,19 @@ public class PlayerManager : MonoBehaviour
         optionScreen.SetActive(true);
 
         if (gameOverScreen.activeSelf)
-        {
             gameOverScreen.SetActive(false);
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            optionScreen.SetActive(true);
-        }
+
+        if (pauseMenuScreen.activeSelf)
+            pauseMenuScreen.SetActive(false);
     }
 
     public void CloseOptions()
     {
         optionScreen.SetActive(false);
+
+        if (isGameOver)
+        {
+            gameOverScreen.SetActive(true);
+        }
     }
 }

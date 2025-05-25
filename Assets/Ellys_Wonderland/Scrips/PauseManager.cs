@@ -3,12 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    public GameObject pausePanel; 
+    public GameObject pausePanel;
 
     private bool isPaused = false;
 
     void Update()
     {
+        if (PlayerManager.isGameOver)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -35,8 +38,9 @@ public class PauseManager : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainRobby"); 
+        SceneManager.LoadScene("MainRobby");
     }
+
     public void RetryGame()
     {
         Time.timeScale = 1f;
