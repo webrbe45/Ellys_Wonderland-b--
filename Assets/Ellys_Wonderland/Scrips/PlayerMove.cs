@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,10 +14,12 @@ public class PlayerMove : MonoBehaviour
     
     private Rigidbody2D rb;
     private bool isGrounded;
+    private Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -27,15 +30,20 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(-speed, 0, 0);
+            anim.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+            anim.SetFloat("yVelocity", rb.velocity.y);
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(speed, 0, 0);
+            anim.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+            anim.SetFloat("yVelocity", rb.velocity.y);
         }
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            anim.SetBool("IsJumping", !isGrounded);
         }
 
         if (rb.velocity.y < 0)
@@ -52,8 +60,10 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("JumpPad"))
         {
+
             rb.velocity = new Vector2(rb.velocity.x, 0); 
-            rb.AddForce(Vector2.up * bouncepower, ForceMode2D.Impulse); 
+            rb.AddForce(Vector2.up * bouncepower, ForceMode2D.Impulse);
+            anim.SetBool("IsJumping", !isGrounded);
         }
         if (collision.gameObject.CompareTag("HeartQueen"))
         {
