@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 894142869947718964}
   - component: {fileID: 3460310967202146006}
   - component: {fileID: 8451200759249688304}
+  - component: {fileID: 7880727124274379137}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -199,3 +200,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7880727124274379137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3850994274918521303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d399ca63278c4d041812b3e48e8ca2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 1519557362, guid: 26c038ab27728de4c99ae34a51154e3a, type: 3}
+  emptyHeart: {fileID: -2054317752, guid: cd83a6671d0b5ef45bee2613bd7f53dd, type: 3}
+  blinkDuration: 2
+  blinkInterval: 0.1
+  knockbackForce: 5
+  damageCooldown: 2
+  gameOverPanel: {fileID: 0}
+  isDead: 0

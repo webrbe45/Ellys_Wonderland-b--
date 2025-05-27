@@ -3194,6 +3194,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7880727124274379137, guid: ca00f268e3b1b22408becd66b3de6029, type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 958322191}
+    - target: {fileID: 7880727124274379137, guid: ca00f268e3b1b22408becd66b3de6029, type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1110750670}
+    - target: {fileID: 7880727124274379137, guid: ca00f268e3b1b22408becd66b3de6029, type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 1371389853}
     - target: {fileID: 8809276287558172849, guid: ca00f268e3b1b22408becd66b3de6029, type: 3}
       propertyPath: m_SortingLayer
       value: 0
