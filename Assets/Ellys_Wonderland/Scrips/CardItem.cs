@@ -17,6 +17,7 @@ public class CardItem : MonoBehaviour
     {
         sr.enabled = false;
         col.enabled = false;
+        SoundManager.instance.PlaySE();
     }
 
     public void Show()
@@ -25,4 +26,6 @@ public class CardItem : MonoBehaviour
         sr.enabled = true;
         col.enabled = true;
     }
+    
+
 }

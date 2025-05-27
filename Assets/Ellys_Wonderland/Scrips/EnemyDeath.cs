@@ -18,7 +18,8 @@ public class EnemyDeath : MonoBehaviour
                         playerRb.velocity = new Vector2(playerRb.velocity.x, bounceForce); 
                     }
 
-                    Destroy(gameObject); 
+                    Destroy(gameObject);
+                    
                 }
             }
         }
