@@ -18,6 +18,10 @@ public class PlayerManager : MonoBehaviour
 
     private PlayerManager1 playerScript;
 
+    private void Start()
+    {
+        optionScreen.SetActive(false);
+    }
     private void Awake()
     {
         characterIndex = PlayerPrefs.GetInt("SelectedCharacter", 0);
