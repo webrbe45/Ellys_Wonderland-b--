@@ -4552,6 +4552,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 677172660}
   m_SourcePrefab: {fileID: 100100000, guid: ca00f268e3b1b22408becd66b3de6029, type: 3}
+--- !u!1001 &2053843994
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.3887005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092052525225440946, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141929547978721052, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+      propertyPath: m_Name
+      value: Enemy-Spear
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
 --- !u!1 &2116019440
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,14 +4746,15 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1037858556}
   - {fileID: 519420032}
   - {fileID: 455975447}
   - {fileID: 1705849776}
   - {fileID: 1666596995}
   - {fileID: 2011635166}
   - {fileID: 1142727166}
-  - {fileID: 1037858556}
   - {fileID: 246653035}
   - {fileID: 720002668}
   - {fileID: 1609390826}
   - {fileID: 1778638200}
+  - {fileID: 2053843994}

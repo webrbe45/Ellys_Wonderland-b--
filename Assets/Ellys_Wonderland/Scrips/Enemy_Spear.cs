@@ -56,8 +56,8 @@ public class Enemy_Spear : MonoBehaviour
         if (isChasing)
         {
             // 추격
-            Vector2 direction = (player.position - transform.position).normalized;
-            transform.Translate(direction * chaseSpeed * Time.deltaTime); 
+           /* Vector2 direction = (player.position - transform.position).normalized;
+            transform.Translate(direction * chaseSpeed * Time.deltaTime); */
 
             // 창 던지기
             if (Time.time >= lastThrowTime + throwCooldown)

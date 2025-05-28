@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2572754319709600614}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.655, y: -0.315, z: 0}
+  m_LocalPosition: {x: -1.877, y: 0.426, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -224,5 +224,5 @@ MonoBehaviour:
   stopDuration: 1
   spearPrefab: {fileID: 8451401308170443995, guid: da20b52b382172042ab34e0de2a8842b, type: 3}
   throwPoint: {fileID: 6405326929075125993}
-  throwForce: 10
-  throwCooldown: 2
+  throwForce: 5
+  throwCooldown: 3

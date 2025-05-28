@@ -137,5 +137,12 @@ public class PlayerManager1 : MonoBehaviour
         {
             TakeDamage(1, Vector2.zero);
         }
+
+        if (other.CompareTag("Spear") && damageTimer <= 0 && !isBlinking)
+        {
+            TakeDamage(1, Vector2.zero);
+        }
     }
+
+
 }
