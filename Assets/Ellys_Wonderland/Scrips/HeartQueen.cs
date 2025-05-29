@@ -166,6 +166,7 @@ public class HeartQueen : MonoBehaviour
         Debug.Log("스킬2: 카드병정 소환");
 
         anim.SetTrigger("IsSummon");
+        yield return new WaitForSeconds(1f);
 
         GameObject leftSoldier = Instantiate(soldierPrefab1, leftSpawnPoint.position, Quaternion.identity);
         GameObject rightSoldier = Instantiate(soldierPrefab2, rightSpawnPoint.position, Quaternion.identity);

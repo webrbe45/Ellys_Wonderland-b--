@@ -176,7 +176,7 @@ MonoBehaviour:
   patrolSpeed: 2
   chaseSpeed: 5
   patrolDistance: 3
-  detectionRange: 5
+  detectionRange: 10
   stopDuration: 1
 --- !u!114 &275991778248394586
 MonoBehaviour:
