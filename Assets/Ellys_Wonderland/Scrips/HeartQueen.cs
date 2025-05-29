@@ -22,6 +22,8 @@ public class HeartQueen : MonoBehaviour
     public GameObject soldierPrefab1;
     public GameObject soldierPrefab2;
 
+    private Animator anim;
+
     public Transform leftSpawnPoint;
     public Transform rightSpawnPoint;
 
@@ -30,6 +32,7 @@ public class HeartQueen : MonoBehaviour
         currentHP = maxHP;
         StartCoroutine(SkillRoutine());
 
+        anim = GetComponent<Animator>();
 
     }
 
@@ -114,7 +117,11 @@ public class HeartQueen : MonoBehaviour
 
     private IEnumerator UseNoteSkill()
     {
-        Debug.Log("스킬: 음표");
+        Debug.Log("스킬1: 음표");
+
+        anim.SetTrigger("IsSing");
+
+        yield return new WaitForSeconds(1f);
 
         GameObject ground = GameObject.FindWithTag("Ground");
         if (ground == null)
@@ -156,7 +163,9 @@ public class HeartQueen : MonoBehaviour
 
     private IEnumerator UseSummonSkill()
     {
-        Debug.Log("스킬: 카드병정 소환");
+        Debug.Log("스킬2: 카드병정 소환");
+
+        anim.SetTrigger("IsSummon");
 
         GameObject leftSoldier = Instantiate(soldierPrefab1, leftSpawnPoint.position, Quaternion.identity);
         GameObject rightSoldier = Instantiate(soldierPrefab2, rightSpawnPoint.position, Quaternion.identity);
