@@ -4,9 +4,11 @@ public class EnemyAI : MonoBehaviour
 {
     public float patrolSpeed = 2f; //기본 이동속도
     public float chaseSpeed = 5f; //돌진 속도
-    public float patrolDistance = 3f; //좌우 이동 거리
+    public float patrolDistance = 2f; //좌우 이동 거리
     public float detectionRange = 10f; //플레이어 인식 범위
     public float stopDuration = 1f; // 플레이어와 충돌 시 멈추는 시간
+
+    private Animator anim;
 
     private Transform player;
     private Vector2 startPos;
@@ -17,6 +19,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         startPos = transform.position;
     }
@@ -73,6 +76,10 @@ public class EnemyAI : MonoBehaviour
 
     void Patrol()
     {
+
+        anim.SetBool("IsStop", true);
+        anim.SetBool("IsGo", false);
+        anim.SetBool("IsReady", false);
         float move = (movingRight ? 1 : -1) * patrolSpeed * Time.deltaTime;
         transform.Translate(move, 0, 0);
 

@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 3657919673405599404}
   - component: {fileID: 6101491199282018396}
   - component: {fileID: 2032433392272630126}
+  - component: {fileID: 2800206671569365927}
   m_Layer: 0
   m_Name: Enemy-Spear
   m_TagString: Trap
@@ -226,3 +227,24 @@ MonoBehaviour:
   throwPoint: {fileID: 6405326929075125993}
   throwForce: 5
   throwCooldown: 3
+--- !u!95 &2800206671569365927
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7141929547978721052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eae82b50d97d7ac45b80db7c3e22801e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

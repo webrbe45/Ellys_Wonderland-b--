@@ -11,10 +11,10 @@ public class HeartQueen : MonoBehaviour
     private enum State { Normal, Groggy }
     private State currentState = State.Normal;
 
-    public float groggyDuration = 2f;
+    public float groggyDuration = 10f;
     private bool isDead = false;
 
-    public float skillDelayAfterGroggy = 1f;
+    public float skillDelayAfterGroggy = 2f;
     private bool canUseSkill = true;
 
     public GameObject warningPrefab;

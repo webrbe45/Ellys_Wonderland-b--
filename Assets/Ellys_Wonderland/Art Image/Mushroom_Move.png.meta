@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mushroom_Move_0
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1571
+        width: 1055
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae28f26a04b2f94484ba5375c58519e
+      internalID: 1466894263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom_Move_1
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1571
+        width: 1078
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8868de2b5626f8c4c92f31d8d1c747ce
+      internalID: 533765164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom_Move_2
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 1570
+        width: 1071
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3e609274ecb45449556ca69a0f235f
+      internalID: 2120957926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom_Move_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 909
+        width: 1077
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a1f3e3b464e974eaee68c897593276
+      internalID: 2143633574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom_Move_4
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 907
+        width: 1072
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b5d28b7a0e9144f992f43063fa039b
+      internalID: 1038495512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom_Move_5
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 907
+        width: 1077
+        height: 543
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d97165a69554b745aa68720b9c3fbec
+      internalID: 566365233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom_Move_6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 242
+        width: 1070
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393a8c5ab6846814398a2260f69650bd
+      internalID: 325468828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom_Move_7
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 244
+        width: 1078
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac700785fc57574ab3ffac68b43ae57
+      internalID: 1920883519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom_Move_8
+      rect:
+        serializedVersion: 2
+        x: 2398
+        y: 242
+        width: 1056
+        height: 636
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2aad358a97dd6647822114ee8de2945
+      internalID: -1506877644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +295,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mushroom_Move_0: 1466894263
+      Mushroom_Move_1: 533765164
+      Mushroom_Move_2: 2120957926
+      Mushroom_Move_3: 2143633574
+      Mushroom_Move_4: 1038495512
+      Mushroom_Move_5: 566365233
+      Mushroom_Move_6: 325468828
+      Mushroom_Move_7: 1920883519
+      Mushroom_Move_8: -1506877644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
