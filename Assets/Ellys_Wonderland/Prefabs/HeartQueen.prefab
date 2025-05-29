@@ -176,6 +176,8 @@ MonoBehaviour:
   skillDelayAfterGroggy: 1
   warningPrefab: {fileID: 1596706717134337924, guid: a194a5318ce282340b7adde26a7aaff3, type: 3}
   notePrefab: {fileID: 5195462973679425569, guid: 371c9f97083d81c418a650431292bf73, type: 3}
-  soldierPrefab: {fileID: 8011181491184324100, guid: 6ca9aa09e067e92418d27f16244b8add, type: 3}
+  soldierPrefab1: {fileID: 7141929547978721052, guid: 0faf3046c9d5fa44a837f4fef729a951, type: 3}
+  soldierPrefab2: {fileID: 8011181491184324100, guid: 6ca9aa09e067e92418d27f16244b8add, type: 3}
   leftSpawnPoint: {fileID: 0}
   rightSpawnPoint: {fileID: 0}
+  nextSceneName: 

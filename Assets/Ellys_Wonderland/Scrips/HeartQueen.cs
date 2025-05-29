@@ -19,7 +19,8 @@ public class HeartQueen : MonoBehaviour
 
     public GameObject warningPrefab;
     public GameObject notePrefab;
-    public GameObject soldierPrefab;
+    public GameObject soldierPrefab1;
+    public GameObject soldierPrefab2;
 
     public Transform leftSpawnPoint;
     public Transform rightSpawnPoint;
@@ -157,8 +158,8 @@ public class HeartQueen : MonoBehaviour
     {
         Debug.Log("스킬: 카드병정 소환");
 
-        GameObject leftSoldier = Instantiate(soldierPrefab, leftSpawnPoint.position, Quaternion.identity);
-        GameObject rightSoldier = Instantiate(soldierPrefab, rightSpawnPoint.position, Quaternion.identity);
+        GameObject leftSoldier = Instantiate(soldierPrefab1, leftSpawnPoint.position, Quaternion.identity);
+        GameObject rightSoldier = Instantiate(soldierPrefab2, rightSpawnPoint.position, Quaternion.identity);
 
         while (true)
         {
