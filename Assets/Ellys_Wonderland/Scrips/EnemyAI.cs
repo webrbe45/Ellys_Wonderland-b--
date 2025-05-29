@@ -5,7 +5,7 @@ public class EnemyAI : MonoBehaviour
     public float patrolSpeed = 2f; //기본 이동속도
     public float chaseSpeed = 5f; //돌진 속도
     public float patrolDistance = 3f; //좌우 이동 거리
-    public float detectionRange = 5f; //플레이어 인식 범위
+    public float detectionRange = 10f; //플레이어 인식 범위
     public float stopDuration = 1f; // 플레이어와 충돌 시 멈추는 시간
 
     private Transform player;
@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 // player가 없으면 패트롤만 수행
-                //Patrol();
+                Patrol();
                 return;
             }
         }
@@ -67,11 +67,11 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            //Patrol();
+            Patrol();
         }
     }
 
-    /*void Patrol()
+    void Patrol()
     {
         float move = (movingRight ? 1 : -1) * patrolSpeed * Time.deltaTime;
         transform.Translate(move, 0, 0);
@@ -84,7 +84,7 @@ public class EnemyAI : MonoBehaviour
             scale.x = Mathf.Abs(scale.x) * (movingRight ? 1 : -1);
             transform.localScale = scale;
         }
-    }*/
+    }
 
 
     void OnCollisionEnter2D(Collision2D collision)
