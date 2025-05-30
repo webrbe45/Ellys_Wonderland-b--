@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2161276084429632071}
   - component: {fileID: 1844496727232636944}
   - component: {fileID: 4530225402288390488}
+  - component: {fileID: 1173681364970226589}
+  - component: {fileID: 4271928217269002803}
   m_Layer: 0
   m_Name: JumpPad
   m_TagString: JumpPad
@@ -120,3 +122,37 @@ CapsuleCollider2D:
   m_Offset: {x: 0.034954168, y: 0.7868804}
   m_Size: {x: 5.653795, y: 4.814546}
   m_Direction: 1
+--- !u!114 &1173681364970226589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305574650673098891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60b2dc1ea360d74a87d26338d8393b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 5
+--- !u!95 &4271928217269002803
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305574650673098891}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56e5f384afb03fa4b8f3635e6685572d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
