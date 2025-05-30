@@ -7,12 +7,12 @@ public class Enemy_Spear : MonoBehaviour
     public float patrolSpeed = 2f;
     public float chaseSpeed = 5f;
     public float patrolDistance = 10f;
-    public float detectionRange = 5f;
+    public float detectionRange = 20f;
     public float stopDuration = 1f;
 
     public GameObject spearPrefab; // 던질 창 프리팹
     public Transform throwPoint;   // 창이 나갈 위치
-    public float throwForce = 10f; // 창 던지기 힘
+    public float throwForce = 20f; // 창 던지기 힘
     public float throwCooldown = 2f; // 창 던지기 쿨타임
 
 
