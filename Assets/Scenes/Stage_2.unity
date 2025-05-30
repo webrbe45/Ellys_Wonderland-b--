@@ -7285,9 +7285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de70ec866b14fe46a73cd1aa7954275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 0}
-  pauseMenuScreen: {fileID: 0}
-  optionScreen: {fileID: 0}
+  gameOverScreen: {fileID: 1200271622}
+  pauseMenuScreen: {fileID: 865184641}
+  optionScreen: {fileID: 1588212006}
   coinsText: {fileID: 0}
   playerPrefabs: []
 --- !u!4 &2026315526
