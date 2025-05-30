@@ -84,9 +84,14 @@ public class Enemy_Spear : MonoBehaviour
             }
 
             anim.SetTrigger("IsRedCard_Throw");
+
             Vector2 direction = (player.position - throwPoint.position).normalized;
-            GameObject spear = Instantiate(spearPrefab, throwPoint.position, Quaternion.identity);
-            Debug.Log("창 생성됨");
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            angle -= 90f; // spear 이미지가 아래를 기본 방향으로 할 때
+
+            GameObject spear = Instantiate(spearPrefab, throwPoint.position, Quaternion.Euler(0, 0, angle));
+            Debug.Log("창 생성됨, 회전각: " + angle);
 
             Rigidbody2D rb = spear.GetComponent<Rigidbody2D>();
             if (rb != null)

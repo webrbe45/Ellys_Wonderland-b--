@@ -6,7 +6,7 @@ public class Spear : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Quaternion rotation = Quaternion.Euler(0, 0, 90f);
+        
         Debug.Log("창이 충돌함: " + collision.name);
 
         // Player 태그를 가진 오브젝트에만 반응
