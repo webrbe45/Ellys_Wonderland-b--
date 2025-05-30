@@ -15,6 +15,9 @@ public class Enemy_Spear : MonoBehaviour
     public float throwForce = 10f; // 창 던지기 힘
     public float throwCooldown = 2f; // 창 던지기 쿨타임
 
+
+    private Animator anim;
+
     private Transform player;
     private Vector2 startPos;
     private bool movingRight = true;
@@ -27,6 +30,7 @@ public class Enemy_Spear : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         startPos = transform.position;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -79,6 +83,7 @@ public class Enemy_Spear : MonoBehaviour
                 return;
             }
 
+            anim.SetTrigger("IsRedCard_Throw");
             Vector2 direction = (player.position - throwPoint.position).normalized;
             GameObject spear = Instantiate(spearPrefab, throwPoint.position, Quaternion.identity);
             Debug.Log("창 생성됨");

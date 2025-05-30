@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2161276084429632071}
   - component: {fileID: 1844496727232636944}
-  - component: {fileID: 6209326418855464562}
+  - component: {fileID: 4530225402288390488}
   m_Layer: 0
   m_Name: JumpPad
   m_TagString: JumpPad
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6209326418855464562
-BoxCollider2D:
+--- !u!70 &4530225402288390488
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,16 +117,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.55, y: 6.340679}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.034954168, y: 0.7868804}
+  m_Size: {x: 5.653795, y: 4.814546}
+  m_Direction: 1
