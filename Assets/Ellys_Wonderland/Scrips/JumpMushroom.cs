@@ -5,11 +5,19 @@ using UnityEngine;
 public class JumpMushroom : MonoBehaviour
 {
     public float jumpHeight = 5f;
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player"))
         {
+            anim.SetTrigger("IsMushJump");
             Rigidbody2D rb = collision.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {

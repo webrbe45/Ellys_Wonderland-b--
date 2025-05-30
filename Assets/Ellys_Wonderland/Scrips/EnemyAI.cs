@@ -17,6 +17,10 @@ public class EnemyAI : MonoBehaviour
     private bool isStopped = false;
     private float stopTimer = 0f;
 
+    public float chaseDelay = 0.5f; // 준비 애니메이션 시간
+    private bool isPreparingChase = false;
+    private float chaseDelayTimer = 0f;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -62,9 +66,11 @@ public class EnemyAI : MonoBehaviour
         {
             isChasing = false;
         }
-
         if (isChasing)
         {
+            anim.SetBool("IsStop", false);
+            anim.SetBool("IsGo", false);
+            anim.SetBool("IsReady", true);
             Vector2 direction = (player.position - transform.position).normalized;
             transform.Translate(direction * chaseSpeed * Time.deltaTime);
         }
@@ -74,32 +80,33 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+
     void Patrol()
-    {
-
-        anim.SetBool("IsStop", true);
-        anim.SetBool("IsGo", false);
-        anim.SetBool("IsReady", false);
-        float move = (movingRight ? 1 : -1) * patrolSpeed * Time.deltaTime;
-        transform.Translate(move, 0, 0);
-
-        if (Vector2.Distance(transform.position, startPos) > patrolDistance)
         {
-            movingRight = !movingRight;
 
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x) * (movingRight ? 1 : -1);
-            transform.localScale = scale;
+            anim.SetBool("IsStop", true);
+            anim.SetBool("IsGo", false);
+            anim.SetBool("IsReady", false);
+            float move = (movingRight ? 1 : -1) * patrolSpeed * Time.deltaTime;
+            transform.Translate(move, 0, 0);
+
+            if (Vector2.Distance(transform.position, startPos) > patrolDistance)
+            {
+                movingRight = !movingRight;
+
+                Vector3 scale = transform.localScale;
+                scale.x = Mathf.Abs(scale.x) * (movingRight ? 1 : -1);
+                transform.localScale = scale;
+            }
+        }
+
+
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                isStopped = true;
+                stopTimer = stopDuration;
+            }
         }
     }
-
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            isStopped = true;
-            stopTimer = stopDuration;
-        }
-    }
-}

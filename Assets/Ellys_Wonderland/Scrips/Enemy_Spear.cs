@@ -6,7 +6,7 @@ public class Enemy_Spear : MonoBehaviour
 {
     public float patrolSpeed = 2f;
     public float chaseSpeed = 5f;
-    public float patrolDistance = 3f;
+    public float patrolDistance = 10f;
     public float detectionRange = 5f;
     public float stopDuration = 1f;
 

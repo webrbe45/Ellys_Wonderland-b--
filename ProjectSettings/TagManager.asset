@@ -55,9 +55,9 @@ TagManager:
   - name: BackG
     uniqueID: 55604631
     locked: 0
-  - name: Player
-    uniqueID: 3350305925
-    locked: 0
   - name: New Layer 3
     uniqueID: 1993676075
+    locked: 0
+  - name: Player
+    uniqueID: 3350305925
     locked: 0
