@@ -52,6 +52,7 @@ public class HeartQueen : MonoBehaviour
             {
                 ExitGroggy();
             }
+
         }
     }
 
